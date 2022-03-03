@@ -13,7 +13,6 @@ export default DetailsScreen = ({ navigation, route }) => {
     const artist = route.params.item;
 
     useEffect(() => {
-        console.log("colors", colors);
         navigation.setOptions({ title: artist.name })
         dispatch(fetchTopAlbumsAction(artist.name));
         dispatch(fetchTopTracksAction(artist.name));
